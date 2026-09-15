@@ -20,20 +20,20 @@ namespace ElatkozottBurok.Tesztek
             Assert.That(snack.Ar, Is.EqualTo(100));
         }
 
-        //[Test]
-        //public void Fejleszto_KoffeinEsStresszHatarteruletek_EsKiegveAllapot()
-        //{
-        //    var dev = new Fejleszto("Teszt Elek", Munkakor.Junior, 1000, "Kávé", 50, 20);
+        [Test]
+        public void Fejleszto_KoffeinEsStresszHatarteruletek_EsKiegveAllapot()
+        {
+            var dev = new Fejleszto("Teszt Elek", Munkakor.Junior, 1000, "Kávé", 50, 20);
 
-        //    dev.Koffeinszint = 120;
-        //    Assert.That(dev.Koffeinszint, Is.EqualTo(100));
-        //    Assert.That(dev.Kiegve, Is.True);
+            dev.KoffeinSzint = 120;
+            Assert.That(dev.KoffeinSzint, Is.EqualTo(100));
+            Assert.That(dev.Kiegve, Is.True);
 
-        //    var dev2 = new Fejleszto("Teszt Anna", Munkakor.Senior, 1000, "Kávé", 50, 20);
-        //    dev2.StresszSzint = 100;
-        //    Assert.That(dev2.StresszSzint, Is.EqualTo(100));
-        //    Assert.That(dev2.Kiegve, Is.True);
-        //}
+            var dev2 = new Fejleszto("Teszt Anna", Munkakor.Senior, 1000, "Kávé", 50, 20);
+            dev2.StresszSzint = 100;
+            Assert.That(dev2.StresszSzint, Is.EqualTo(100));
+            Assert.That(dev2.Kiegve, Is.True);
+        }
 
         //[Test]
         //public void Fejleszto_KedvencSnack_KetszeresStresszoldasEsExtraKoffein()
