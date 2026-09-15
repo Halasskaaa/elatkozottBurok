@@ -26,7 +26,16 @@ namespace ElatkozottBurok
 
         public string Nev { get => nev; set => nev = value; }
         public Munkakor Munkakor { get => munkakor; set => munkakor = value; }
-        public int Penz { get => penz; set => penz = value; }
+        public int Penz { 
+            get => penz; 
+            set {
+                if (penz < 0)
+                {
+                    Console.WriteLine("Pénz nem lehet 0-nál kevesebb.");
+                }
+                else { penz = value; }
+            }
+        }
         public int KoffeinSzint { get => koffeinSzint; set => koffeinSzint = value; }
         public int StresszSzint { get => stresszSzint; set => stresszSzint = value; }
         public bool Kiegve { get => kiegve; set => kiegve = value; }

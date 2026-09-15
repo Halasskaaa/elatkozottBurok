@@ -27,10 +27,7 @@ namespace ElatkozottBurok
                 {
                     nev = "Ismeretlen nassolnivaló";
                 } 
-                else
-                {
-                    nev = value;
-                }
+                else { nev = value; }
             }
         }
         public int KoffeinLoket { 
@@ -44,10 +41,7 @@ namespace ElatkozottBurok
                 {
                     koffeinLoket = 50;
                 }
-                else
-                {
-                    koffeinLoket = value;
-                }
+                else { koffeinLoket = value; }
             } 
         }
         public int StresszOldas { 
