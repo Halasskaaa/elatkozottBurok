@@ -57,7 +57,7 @@ namespace ElatkozottBurok
                 {
                     Console.WriteLine("Stressz csökkentés 0 és 30 között lehet.");
                 }
-                stresszOldas = value; 
+                else {  stresszOldas = value; }
             }
         }
         public int Ar { 
@@ -67,7 +67,8 @@ namespace ElatkozottBurok
                 {
                     Console.WriteLine("Az árnak minimum 100-nka kell lennie.");
                 }
-                ar = value; 
+                else { ar = value;  }
+                
             } 
         }
     }
