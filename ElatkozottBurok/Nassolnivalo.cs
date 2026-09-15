@@ -12,7 +12,7 @@ namespace ElatkozottBurok
         private int stresszOldas;
         private int ar;
 
-        public Nassolnivalo(string nev, int koffeinLoket, int stresszOldas, int ar)
+        public Nassolnivalo(string nev, int stresszOldas, int ar, int koffeinLoket)
         {
             this.nev = nev;
             this.koffeinLoket = koffeinLoket;
@@ -36,13 +36,9 @@ namespace ElatkozottBurok
         public int KoffeinLoket { 
             get => koffeinLoket; 
             set {
-                if (koffeinLoket < 0)
+                if (koffeinLoket < 0 || koffeinLoket > 50)
                 {
-                    koffeinLoket = 0;
-                }
-                else if (koffeinLoket > 50)
-                {
-                    koffeinLoket = 50;
+                    Console.WriteLine("Koffein szintnek 0 és 50 között kell lennie.");
                 }
                 else
                 {
@@ -53,22 +49,9 @@ namespace ElatkozottBurok
         public int StresszOldas { 
             get => stresszOldas; 
             set {
-                if (stresszOldas < 0 || stresszOldas > 30)
-                {
-                    Console.WriteLine("Stressz csökkentés 0 és 30 között lehet.");
-                }
                 stresszOldas = value; 
             }
         }
-        public int Ar { 
-            get => ar; 
-            set {
-                if (ar  < 100)
-                {
-                    Console.WriteLine("Az árnak minimum 100-nka kell lennie.");
-                }
-                ar = value; 
-            } 
-        }
+        public int Ar { get => ar; set => ar = value; }
     }
 }

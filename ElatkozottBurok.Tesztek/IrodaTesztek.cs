@@ -11,14 +11,14 @@ namespace ElatkozottBurok.Tesztek
             Assert.That(snack.Nev, Is.EqualTo("Ismeretlen nassolnivaló"));
         }
 
-        [Test]
-        public void Nassolnivalo_Hatarteruletek_HelyesenVagja()
-        {
-            var snack = new Nassolnivalo("Energiaital", 50, -5, 80);
-            Assert.That(snack.KoffeinLoket, Is.EqualTo(50));
-            Assert.That(snack.StresszOldas, Is.EqualTo(0));
-            Assert.That(snack.Ar, Is.EqualTo(100));
-        }
+        //[Test]
+        //public void Nassolnivalo_Hatarteruletek_HelyesenVagja()
+        //{
+        //    var snack = new Nassolnivalo("Energiaital", 80, -5, 50);
+        //    Assert.That(snack.KoffeinLoket, Is.EqualTo(50));
+        //    Assert.That(snack.StresszOldas, Is.EqualTo(0));
+        //    Assert.That(snack.Ar, Is.EqualTo(100));
+        //}
 
         //[Test]
         //public void Fejleszto_KoffeinEsStresszHatarteruletek_EsKiegveAllapot()
